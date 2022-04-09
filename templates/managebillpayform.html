@@ -1,0 +1,112 @@
+<div class="centre" style="margin-top:5vh;">
+    <div class="grid-container" style="top:100vh;">
+        <div id="row">
+            <div class="main-body" style="display: flex; justify-content: center; width:100vw;">
+                <div class="login-container" style="min-width:450px; width:30vw; margin-top:30px;">
+                    <p class="sign-in">Bills I need to pay</p>
+                    <div style="width: 100%;" class="user-table">
+                        <table id="table-entry" style="margin-top:20px; width:100%;">
+                            <tr id="header-row"> 
+                                <th>Bill Date:</th>
+                                <th>Bill name:</th>
+                                <th>Description:</th>
+                                <th>Pay to:</th>
+                                <th>Amount:</th>
+                                <th style="width:10px">Pay:</th>
+                        
+                            </tr>
+                    
+                            {%for bill in billList%}
+                            <form action="/updateStatusToPp" id="{{billListItems[loop.index0].id}}" method="post" onsubmit="return payBill({{billListItems[loop.index0].id}}, {{loop.index0}})">  
+                                <tr id="{{billListItems[loop.index0].id}}">
+                                    <td>{{bill.date}}</td>
+                                    <td>{{billList[loop.index0].name}}</td>
+                                    <td>{{bill.description}}</td>
+                                    <td>{{billPayTo[loop.index0]}}</td>
+                                    <td>{{billListItems[loop.index0].amount}}</td>
+                                    <input type="hidden" id="billId{{billListItems[loop.index0].id}}" name="billId1" value="{{billListItems[loop.index0].id}}">
+                                    <td><button  class="btn1 addbill-btn" style="width:80px; margin:10px; height:30px" type="submit">Pay</button></td>
+                                </tr>
+                            </form>
+                            {%endfor%}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="row">
+            <div class="main-body" style="display: flex; justify-content: center; width:100vw;">
+                <div class="login-container" style="min-width:450px; width:30vw; margin-top: 30px; ">
+                    <p class="sign-in">Bills awaiting approval</p>
+                    <div style="width: 100%;" class="user-table">
+                        <table id="table-entry" style="margin-top:20px; width:100%;">
+                            <tr id="header-row"> 
+                                    <th>Bill date:</th>
+                                    <th>Bill paid:</th>
+                                    <th style="width:15%">Bill name:</th>
+                                    <th>Description:</th>
+                                    <th style="width:15%">Pay to:</th>
+                                    <th>Amount:</th>
+                            </tr>
+                        
+                                {%for bill in billPending%}
+                                <form action="/updateStatusToP" method="post">
+                                    <tr>
+                                        <td>{{billPendingData[loop.index0].date}}</td>
+                                        <td>{{billPending[loop.index0].date_paid}}</td>
+                                        <td>{{billPendingData[loop.index0].name}}</td>
+                                        <td>{{billPendingData[loop.index0].description}}</td>
+                                        <td>{{billPendingUser[loop.index0]}}</td>
+                                        <td>{{billPending[loop.index0].amount}}</td>
+                                        
+                                        </td>
+
+                                    </tr>
+                                </form>
+                                {%endfor%}
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="main-body" style="display: flex; justify-content: center; width:100vw;">
+                <div class="login-container" style="min-width:450px; width:30vw;margin-top: 30px; padding-bottom: 10vh;">
+                    <p class="sign-in">Completed bills</p>
+                    <form action="/updateStatus" method="post">
+                        <div style="width: 100%;" class="user-table">
+                            <table id="table-entry" style="margin-top:20px; width:100%;">
+                                <tr id="header-row"> 
+                                    <th>Bill date:</th>
+                                    <th>Bill paid date:</th>
+                                    <th>Bill name:</th>
+                                    <th>Description:</th>
+                                    <th>Paid to:</th>
+                                    <th>Amount:</th>
+                                
+                                </tr>
+                            
+                                    {%for bill in billCompletedList%}
+                                    
+                                <tr>
+                                    <td>{{billCompletedData[loop.index0].date}}</td>
+                                    <td>{{billCompletedList[loop.index0].date_paid}}</td>
+                                    <td>{{billCompletedData[loop.index0].name}}</td>
+                                    <td>{{billCompletedData[loop.index0].description}}</td>
+                                    <td>{{billCompletedUser[loop.index0]}}</td>
+                                    <td>{{billCompletedList[loop.index0].amount}}</td>
+                                        
+                                </tr>
+                                    
+                                {%endfor%}
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

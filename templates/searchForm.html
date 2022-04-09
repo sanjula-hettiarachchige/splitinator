@@ -1,0 +1,46 @@
+<div class="centre" style="margin-top:10vh;">
+    <form action="/searchQuery" method="post">
+        <div class="main-body" style="display: flex; justify-content: center; width:100vw;">   
+            <div style="margin-top:10hv;" class="login-container">
+                <p class="sign-in">Search for a bill</p>
+                <div style="display: flex; justify-content: center; vertical-align: middle;" class="user-table">
+                    <input style="display: flex; justify-content: center; width:15vw; vertical-align: middle;" class="input-login" type="text" placeholder="bill name" id="searchTerm" autocomplete="off" name="searchTerm">
+                </div>
+                <div id="errors-addbill"></div>
+                
+                <div style="text-align: center;">
+                    <button style="width:10vw; text-align: center; background-color:#0066FF; margin-top:0px;" class="btn1 addbill-btn" type="submit">Search bills</button>
+                </div>
+                <div id="errors-addbill"></div>
+            </div>
+        </div>
+        <div class="main-body" style="display: flex; justify-content: center; width:100vw;">   
+            <div class="login-container" style="min-width:450px; width:30vw; margin-top:30px;">
+                <p class="sign-in">Results</p>
+                <div style="width: 100%;" class="user-table">
+                    <table id="table-entry" style="margin-top:20px; width:100%;">
+                        <tr id="header-row"> 
+                            <th>Bill Date:</th>
+                            <th>Bill name:</th>
+                            <th>Description:</th>
+                            <th>Pay to:</th>
+                            <th>Amount:</th>
+                    
+                        </tr>
+                
+                        {%for bill in billList%}
+                            <tr id="{{billList[loop.index0].id}}">
+                                <td>{{bill.date}}</td>
+                                <td>{{billList[loop.index0].name}}</td>
+                                <td>{{bill.description}}</td>
+                                <td>{{billPayTo[loop.index0]}}</td>
+                                <td>{{billAmount[loop.index0]}}</td>
+                                <input type="hidden" id="billId{{billList[loop.index0].id}}" name="billId1" value="{{billList[loop.index0].id}}">
+                            </tr>
+                        {%endfor%}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/main.css" type="text/css"
+        charset="utf-8">
+        <script src='static/js/jquery-3.6.0.min.js'></script>
+        <script src='static/js/manageBill.js'></script>
+    </head>
+    
+    <body>
+        <div class="main-contents">
+            <div class="inner-contents">
+                {% with name=name%}
+                {% include "header.html" %}
+                {%endwith%} 
+            
+                <div class="main-contents">
+                
+                    <div class="inner-contents">
+                        {% with   billCompletedUser=billCompletedUser,billCompletedData=billCompletedData,billCompletedList=billCompletedList,billListPending=billListPending, billPendingData=billPendingData, billPendingUser=billPendingUser, billPending = billPending, billListItems=billListItems, billList=billList, billPayTo=billPayTo%}
+                        {% include "managebillpayform.html"%}
+                        {% endwith%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

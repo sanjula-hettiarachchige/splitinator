@@ -1,0 +1,67 @@
+<div class="centre" style="width:100vw; margin-top:10vh;"></div>
+    <form action="/addbill.html" method="post" onsubmit="return validate();" >
+        <div class="main-body" style="display: flex; justify-content: center;">   
+            <div class="login-container" style="min-width:300px; width:30vw;">
+                <script>
+
+                    var check = function(e) {
+                        var t = e.value;
+                        e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t;
+                    }
+                </script>
+                {% if houseMates|length > 0 %}
+                <p class="sign-in">Enter the bill details</p>
+                <div class="centre" style="width:30vw; ">
+                    <div class="row">
+                        <input style="display: flex; width:15vw; justify-content: center;" class="input-login" type="text" placeholder="Name" id="name" name="name" autocomplete="off" >  
+                    </div>
+                    <div class="row">    
+                        <input style="display: flex; width:15vw; justify-content: center;" class="input-login" type="text" placeholder="Description" id="description" autocomplete="off" name="description">
+                    </div>
+                    <div class="row">   
+                        <select style="display: flex; width:15vw; justify-content: center;" id=category class="option-item" name="category">
+                    </div> 
+                            <option value="" disabled selected>Select bill category</option>
+                            <option class="option-item" value="grocery">Groceries</option>
+                            <option class="option-item" value="utilities">Utilities</option>
+                            <option class="option-item" value="rent">Rent</option>
+                            <option class="option-item" value="goingout">Going out</option>
+                            <option class="option-item" value="takeaway">Takeaways</option>
+                            <option class="option-item" value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="centre" style="width:30vw;" >
+                    <table style="margin-top:20px; width:30vw; display: flex; justify-content: center; vertical-align: middle;">
+                        <tr id="header-row"> 
+                            <th>Email:</th>
+                            <th>Username:</th>
+                            <th>Amount:</th>
+                        </tr>
+                        <input type="hidden" name="householdId" value="{{ householdId }}">
+                        {% for housemate in houseMates %}
+                            
+                            {%set count = loop.index%}
+                            <input type="hidden" name="count" value="{{ count }} ">
+                            <input type="hidden" name="housemateid[]" value="{{housemate.id}}">
+                            <tr>
+                                <td>{{housemate.email}}</td>
+                                <td>{{housemate.name}}</td>
+                                <td><input style="display: inline; width:5vw;" class="input-total" type="text" placeholder="Amount" id="total" oninput="check(this)" autocomplete="off" name="amount[]" value="0"></td>
+                            </tr>
+                        {%endfor%}
+                        
+                    </table>
+                </div>
+                <div id="errors-addbill"></div>
+                <div style="text-align: center;">
+                    <button style=" margin-bottom:10px; width:15vw; background-color:#0066FF ;" class="btn1 addbill-btn" type="submit">Add bill</button>
+                <div style="text-align: center;">
+                {% else %}
+                    <p class="sign-in">There are no members of the household to add a bill to</p>
+                {%endif%}
+                
+            </div>
+        </div>
+    </form>
+</div>

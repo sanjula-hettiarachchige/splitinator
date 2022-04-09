@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/main.css" type="text/css"
+        charset="utf-8">
+        <script src='static/js/jquery-3.6.0.min.js'></script>
+        <script src='static/js/addBill.js'></script>
+    </head>
+    
+    <body>
+        <div class="main-contents">
+            <div class="inner-contents">
+                {% with name=name%}
+                {% include "header.html" %}
+                {%endwith%} 
+            
+                <div class="main-contents">
+                
+                    <div class="inner-contents">
+                        {% with billCompletedUser=billCompletedUser, billCompletedListItem=billCompletedListItem, billCompletedList=billCompletedList,billPendingApprovalUser=billPendingApprovalUser, billPendingApprovalListItem=billPendingApprovalListItem, billPendingApprovalList=billPendingApprovalList,billPendingListItem=billPendingListItem, billPendingList=billPendingList, billPendingNameList=billPendingNameList%}
+                        {% include "managebillreceiveform.html"%}
+                        {% endwith%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+

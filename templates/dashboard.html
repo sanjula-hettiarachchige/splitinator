@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/main.css" type="text/css"
+        charset="utf-8">
+        <div class="heading">
+            <title>Dashboard</title>
+        </div>
+    </head>
+    {% with name=name%}
+    {% include "header.html" %}
+    {%endwith%} 
+
+    <div class="grid-container" style="top:100vh;">
+        <body>
+            <p class="sign-in" style="display: flex; margin-bottom:0px; color: rgb(255, 255, 255); justify-content: center;">Welcome to the splitinator {{name}}</p>
+        {% if newBills>0 %} 
+            <p class="sign-in" style="color: red;"><a style=" display: flex; justify-content: center; color: red;" href="managebillpay.html"> {{newBills}} new bills have been added to your account</a></p>
+        {%endif%} 
+        <div class="grid-item" style="display: flex; justify-content: center;">
+        {%with billBreakdown=billBreakdown, billBreakdownUser=billBreakdownUser%}
+            {% include "graph.html" %}
+        {%endwith%}
+        </div>
+
+        <div class="grid-item" style="display: flex; justify-content: center; vertical-align: middle;">
+            <body>
+                <div class="main-body ">
+                    <div class="login-container">
+                        <p class="sign-in">Manage outgoing new bills</p>
+                        <table class="table-entry">
+                            <tr id="header-row"> 
+                                <th></th>
+                                <th>Number of bills:</th>
+                                <th>Amount:</th>
+                            </tr>
+                                        
+                            <tr>
+                                <td>Bills I need to pay</td>
+                                <td>{{billOutstanding}}</td>
+                                <td>{{billOutstandingTotal}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Bills wating for approval</td>
+                                <td>{{billWaiting}}</td>
+                                <td>{{billWaitingTotal}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Completed Bills</td>
+                                <td>{{billCompleted}}</td>
+                                <td>{{billCompletedTotal}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="main-body" >
+                    <div class="login-container">
+                        <p class="sign-in">Incoming bills:</p>
+                        <table class="table-entry" >
+                            <tr id="header-row"> 
+                                <th></th>
+                                <th>Number of bills:</th>
+                                <th>Amount:</th>
+                            </tr>
+                                        
+                            <tr>
+                                <td>Bills that need to paid to me</td>
+                                <td>{{pbillOutstanding}}</td>
+                                <td>{{pbillOutstandingTotal}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Bills I need to approve</td>
+                                <td>{{pbillWaiting}}</td>
+                                <td>{{pbillWaitingTotal}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Completed Bills</td>
+                                <td>{{pbillCompleted}}</td>
+                                <td>{{pbillCompletedTotal}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>       
+            </body>
+        </div>
+    </div>
+</html>

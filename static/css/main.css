@@ -1,0 +1,295 @@
+body, html{
+  min-height: 10px;
+  min-width: 10px;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  
+}
+
+body{
+  overflow : visible;
+  overflow-x: hidden;
+  background: url('../wave-haikei.svg') no-repeat;
+  background-size: 100%;
+  background-color: #002233;
+  padding-bottom: 500px;
+  width:1px;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  width:100vw;
+  vertical-align: middle;
+}
+
+.grid-item {
+  text-align: center;
+  width:100vw;
+}
+
+.input-login{
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  display: block;
+  margin: 20px auto;
+  background: #262e49;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 10px;
+  margin-bottom: 30px;
+  width: 280px;
+  outline: none;
+  color: #fcfcfc;
+}
+
+.table-entry{
+  display: flex; 
+  justify-content: center;
+  vertical-align: middle;
+  margin-bottom: 1vh;
+}
+
+.option-item{
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  display: block;
+  margin: 20px auto;
+  background: #262e49;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 10px;
+  margin-bottom: 30px;
+  width: 280px;
+  outline: none;
+  color: #777676;
+}
+.input-login:focus{
+  border: 1px solid #79A6FE;
+}
+
+#errors{
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #d40505; 
+  font-size: 20px;
+  margin-top:5px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+#errors-addbill{
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #d40505; 
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.login-container{
+  border-color: aliceblue;
+  border-style:  solid;
+  width:25vw;
+  height:inherit;
+  border-radius: 9px;
+  border-color: #021e33;
+  border-top: 10px solid #0f4fa1;
+  border-bottom: 10px solid #0f4fa1;
+  background-color: #021e33;
+  box-shadow: 1px 1px 108.8px 19.2px rgb(17, 20, 34);
+}
+
+.input-total{
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  display: block;
+  margin: 20px auto;
+  background: #262e49;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 10px;
+  margin-bottom: 30px;
+  width: 280px;
+  outline: none;
+  color: #fcfcfc;
+  width:200px;
+  margin-bottom: 0px;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  float: center;
+}
+
+.input-total:focus{
+  border: 1px solid #79A6FE;
+}
+
+.user-list{
+  position: relative;
+  float: right;
+}
+
+.user-table{
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+  font-size:13px;
+  float: center;
+  border-collapse: collapse;
+}
+
+.header-row{
+  background-color: #d40505;
+}
+
+tr{
+  text-align: center;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+tr{background-color: #5c7fda;}
+tr:hover {background-color: #5082ff;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #0066FF;
+  color: white;
+}
+
+.hhtext{
+  color: #5c7fda;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+/* top-left border-radius */
+tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+
+/* top-right border-radius */
+tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
+
+/* bottom-left border-radius */
+tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+/* bottom-right border-radius */
+tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+
+.chart-body{
+  display: inline-block;
+}
+.chart{
+  float:left;
+}
+
+.centre {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.btn1 {
+  border:0;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  background: #0066FF;
+  color: #dfdeee;
+  border-radius: 100px;
+  width: 300px;
+  height: 49px;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
+.addbill-btn{
+  background-color: #002233;
+}
+
+.addbill-btn:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+.sign-in{
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #5c6bc0; 
+  font-size: 25px;
+  margin-top:94px;;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+
+
+a{
+  color: #5c7fda;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.topnav {
+  display: inline-block;
+  padding-top: 1vh;
+  align-content: center;
+  width:100vw;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  border-radius: 30px;
+  border-color: #021e33;
+  background-color: #021e33;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  width: 100vw;
+  align-content: center;
+
+}
+.menu-item{
+  margin-right: 20px;
+  float: right;
+}
+

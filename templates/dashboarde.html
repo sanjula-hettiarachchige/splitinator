@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/main.css" type="text/css"
+        charset="utf-8">
+        <div class="heading">
+            <title>Dashboard</title>
+        </div>
+    </head>
+    {% with name=name%}
+    {% include "header.html" %}
+    {%endwith%} 
+    <div class="centre" style="width:100vw; margin-top:10vh;">
+        <div class="main-body" style="display: flex; justify-content: center;">   
+            <div class="login-container" style="min-width:300px; height:200px">
+                <p class="sign-in">There is no data to display</p>
+            </div>
+        </div>
+    </div>
+</html>

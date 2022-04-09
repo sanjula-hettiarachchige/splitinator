@@ -1,0 +1,254 @@
+.menu-element{
+  display:inline-table;
+  padding-right: 10px;
+  padding-left: 10px;
+  align-self: stretch;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px 20px;
+  position: relative;
+  cursor: pointer;
+  color: rgb(89, 114, 163);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.33;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  transition: color 0.1s ease 0s;
+  text-decoration: none;
+  
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+table, th, td {
+  border:1px solid black;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.button-text{
+  padding-right: 30px;
+  padding-top:10px;
+}
+
+.button {
+  background-color: #98a8a8; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  margin-left: 20px;
+  display: inline-block;
+  float: left;
+  width: 150px;
+  margin-left: 50px;
+  background-color: #1c78b6;
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: #2414b4;
+}
+
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tr {
+  border-bottom: 1px solid #9e3838;
+}
+
+.styled-table tr:nth-of-type(even) {
+  background-color: #4657f0;
+}
+
+.styled-table tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+a {
+  text-decoration:none;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.login-container{
+  display: flex;
+  justify-content: center;
+  margin-right: 200px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.redirect{
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  margin-left: 20px;
+  display: none;
+}
+
+.button {
+  background-color: #98a8a8; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.web-text{
+  font-size: 19px;
+  height:60px;
+  color: rgb(89, 114, 163);
+  font-family: DM Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+.main-body{
+  font-size: 19px;
+  line-height: 30px;
+  margin: 17px auto 0px;
+  color: rgb(89, 114, 163);
+  max-width: 680px;
+  font-family: DM Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+.logo{
+  display:flex;
+  justify-content: left;
+  padding-right: 220px;
+  border-color: black;
+}
+.menu {
+  display: flex;
+  justify-content: left;
+}
+
+.heading{
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0px;
+  color: #1e2630;
+  text-align: center;
+  font-family: DM Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+.main-contents{
+  height:1000px;
+  padding-top:1px;
+  padding-left:50px;
+  padding-right:50px;
+  
+}
+
+
+
+.contents{
+  background-color: #ffffff;
+}
+
+label{
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 250px;
+  text-align: right;
+}
+
+input[type=text], select {
+  margin-left: 20px;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  margin-left: 20px;
+  display: inline-block;
+  float: left;
+  width: 150px;
+  margin-left: 310px;
+  padding: 10px;;
+  background-color: #1c78b6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #2414b4;
+}
+
+.addForm{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}

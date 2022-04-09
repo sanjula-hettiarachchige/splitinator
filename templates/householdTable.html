@@ -1,0 +1,29 @@
+<div class="centre" style="margin-top:10vh;">
+    <form action="/addUserHh" method="post" onsubmit="return validate()" >
+        <div  class="main-body" style="display: flex; justify-content: center; width:100vw;">   
+            <div style="margin-top:10hv;" class="login-container">
+                <p class="sign-in">View your household : {{name}}</p>
+                <div style="display: flex; justify-content: center; vertical-align: middle;" class="user-table">
+                    <table id="table-entry" style="margin-top:20px; width:18vw">
+                        <tr id="header-row"> 
+                            <th>Email:</th>
+                            <th>Username:</th>
+                        </tr>
+                        {% for housemate in houseMates %}
+                        <tr>
+                            <td>{{housemate.email}}</td>
+                            <td>{{housemate.name}}</td>
+                        </tr>
+                        {%endfor%}
+                    </table>
+                </div>
+                <div id="errors-addbill"></div>
+                <input style="display: flex; justify-content: center; width:15vw; vertical-align: middle;" class="input-login" type="text" placeholder="Housemate email" id="email" autocomplete="off" name="email">
+                <div style="text-align: center;">
+                    <button style="width:10vw; text-align: center; background-color:#0066FF; margin-top:0px;" class="btn1 addbill-btn" type="submit">Add housemate</button>
+                </div>
+                <div id="errors-addbill"></div>
+            </div>
+        </div>
+    </form>
+</div>
